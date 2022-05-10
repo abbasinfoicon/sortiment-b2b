@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sortiment B2B - Ask a Question</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="main-wrapper">
+        <header class="header d-flex justify-content-between align-items-center sticky-top">
+            <div class="head-left d-flex align-items-center">
+                <a href="#" class="logo"><img src="assets/img/sortiment-logo.png" alt="logo"></a>
+                <div class="search">
+                    <a href="#" class="search-icon"><img src="assets/img/search-solid.png" alt="search"></a>
+                    <input type="text" class="form-control" placeholder="Search for a product…">
+                </div>
+            </div><!-- Header left -->
+            <div class="head-right d-flex align-items-center">
+                <div class="minicart">
+                    <a href="#" class="cart-icon">
+                        <span>
+                            <img src="assets/img/shopping-cart-solid.png" alt="">
+                            <small class="cart-badge">0</small>
+                        </span>
+                        <small class="carttext">0,00 DKK In cart</small>
+                    </a>
+                </div><!-- Minicart -->
+                <div class="head-user-name">
+                    <a href="#">
+                        <span class="username">Welcome “Name”</span>
+                        <img class="user-img" src="assets/img/user-img.png" alt="user picture">
+                    </a>
+                </div><!-- Head user name -->
+            </div><!-- Header right -->
+        </header><!-- Header -->
+        <div class="content-wrap">
+            <section class="product-sec d-flex align-items-start justify-content-end">
+                <aside class="product-sidebar">
+                    <ul class="sidebar-menu">
+                        <li><a href="#"><i class="fas fa-shopping-cart"></i> Order products</a></li>
+                        <li><a href="#"><i class="fas fa-tshirt"></i> My products</a></li>
+                        <li><a href="#"><i class="bi bi-palette-fill"></i> Your company information</a></li>
+                        <li><a href="#"><i class="fas fa-users"></i>Your employees</a></li>
+                        <li><a href="#"><i class="fas fa-receipt"></i> Order history</a></li>
+                        <li><a href="#" class="active"><i class="fas fa-question"></i> Ask a question</a></li>
+                    </ul>
+                    <div class="sidebar-contact-info text-center">
+                        <ul>
+                            <li>
+                                <p>Sortiment ApS<br> Hansborggade 30, 6100 Haderslev</p>
+                            </li>
+                            <li>
+                                <p>Tlf: <strong>30 30 30 30</strong></p>
+                                <p>Kontakt: <a href="mailto:info@sortiment.dk"><strong>info@sortiment.dk</strong></a></p>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                </aside><!-- Product sidebar -->
+                <div class="products-con ask-qus-wrap d-flex">
+                    <div class="chat-wrap">
+                        <div class="welcome-chat text-center">
+                           <p>Welcome to Sortiment LiveChat. Please choose one of<br> the following questions or write your own</p>
+                        </div><!-- Welcome chat -->
+                        <div class="chat-content">
+                            <ul class="chats">
+                                <li>
+                                    <span class="default-msg">This is an auto question</span>
+                                </li>                                
+                                <li>
+                                    <span class="default-msg">I need help with my products</span>
+                                </li> 
+                                <li>
+                                    <img src="assets/img/user-img.png" class="user-img" alt="" width="50">
+                                    <span>I need help with my products</span>
+                                </li>                               
+                                <li class="admin-user">
+                                    <img src="assets/img/Robot.png" class="user-img" alt="" width="50">
+                                    <span>Okay, please click on which of your products on the right.</span>
+                                </li>                               
+                                <li>
+                                    <img src="assets/img/user-img.png" class="user-img" alt="" width="50">
+                                    <img src="assets/img/chat-product-img.jpg" alt="" >
+                                </li>                               
+                                <li class="admin-user">
+                                    <img src="assets/img/Rasmus.png" class="user-img" alt="" width="50">
+                                    <span>Hello my name Is Rasmus, how can I help with this product?</span>
+                                </li>  
+                                <li>
+                                    <img src="assets/img/user-img.png" class="user-img" alt="" width="50">
+                                    <span>This is a message</span>
+                                </li>       
+                                <li>
+                                    <img src="assets/img/user-img.png" class="user-img" alt="" width="50">
+                                    <img src="assets/img/chat-product-img.jpg" alt="" >
+                                </li>                               
+                                <li class="admin-user">
+                                    <img src="assets/img/Rasmus.png" class="user-img" alt="" width="50">
+                                    <span>Hello my name Is Rasmus, how can I help with this product?</span>
+                                </li>  
+                                <li>
+                                    <img src="assets/img/user-img.png" class="user-img" alt="" width="50">
+                                    <span>This is a message</span>
+                                </li>       
+                                <li>
+                                    <div class="rating d-flex align-items-center">
+                                        <div class="col-md-6">
+                                            <p>Please give Rasmus a rating for this conversation</p>                                            
+                                        </div>
+                                        <div class="col-md-6 rating-stars">
+                                            <a href="#"><i class="far fa-star"></i></a>
+                                            <a href="#"><i class="far fa-star"></i></a>
+                                            <a href="#"><i class="far fa-star"></i></a>
+                                            <a href="#"><i class="far fa-star"></i></a>
+                                            <a href="#"><i class="far fa-star"></i></a>
+                                        </div>
+                                            
+                                    </div><!-- Rating -->
+                                </li>                                 
+                            </ul>
+                        </div><!-- Chat content -->
+                        <div class="chat-foot">
+                            <form action="" class=" d-flex justify-content-between">
+                                <input type="text" class="form-control" placeholder="Write your message here">
+                                <a href="#" class="btn btn-blue attach-file"><i class="fas fa-images"></i></a>
+                                <button type="submit" class="btn btn-blue send-msg-btn">Send message <i class="fas fa-paper-plane"></i></button>
+                            </form>
+                        </div><!-- Chat footer -->
+                    </div><!-- Chat box container -->
+                    <div class="right-product-col text-center">
+                        <h4>Your products</h4>
+                            <div class="product-item shadow-box text-center">
+                                <span class="badge-default pending">Pending approval</span>
+                                <a href="#" class="product-img"><img src="assets/img/product-img01.png" alt="Product"></a>
+                                <h5><a href="#">Name of product</a></h5>
+                                <p class="price">Price from: 500 DKK</p>
+                            </div><!-- Product item -->
+                            <div class="product-item shadow-box text-center">
+                                <span class="badge-default approved">Approved</span>
+                                <a href="#" class="product-img"><img src="assets/img/product-img02.png" alt="Product"></a>
+                                <h5><a href="#">Name of product</a></h5>
+                                <p class="price">Price from: 500 DKK</p>
+                            </div><!-- Product item -->
+                            <div class="product-item shadow-box text-center">
+                                <span class="badge-default">Ordered</span>
+                                <a href="#" class="product-img"><img src="assets/img/product-img04.png" alt="Product"></a>
+                                <h5><a href="#">Name of product</a></h5>
+                                <p class="price">Price from: 500 DKK</p>
+                            </div><!-- Product item -->
+                    </div><!-- Right product col -->
+                </div><!-- Ask question wrapper -->
+            </section><!-- Product section -->
+        </div><!-- Content wrapper -->
+    </div><!-- Main wrapper -->
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+</html>

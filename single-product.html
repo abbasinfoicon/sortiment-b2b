@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sortiment B2B - Single Product</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="main-wrapper">
+        <header class="header d-flex justify-content-between align-items-center sticky-top">
+            <div class="head-left d-flex align-items-center">
+                <a href="#" class="logo"><img src="assets/img/sortiment-logo.png" alt="logo"></a>
+                <div class="search">
+                    <a href="#" class="search-icon"><img src="assets/img/search-solid.png" alt="search"></a>
+                    <input type="text" class="form-control" placeholder="Search for a product…">
+                </div>
+            </div><!-- Header left -->
+            <div class="head-right d-flex align-items-center">
+                <div class="minicart">
+                    <a href="#" class="cart-icon">
+                        <span>
+                            <img src="assets/img/shopping-cart-solid.png" alt="">
+                            <small class="cart-badge">0</small>
+                        </span>
+                        <small class="carttext">0,00 DKK In cart</small>
+                    </a>
+                </div><!-- Minicart -->
+                <div class="head-user-name">
+                    <a href="#">
+                        <span class="username">Welcome “Name”</span>
+                        <img class="user-img" src="assets/img/user-img.png" alt="user picture">
+                    </a>
+                </div><!-- Head user name -->
+            </div><!-- Header right -->
+        </header><!-- Header -->
+        <div class="content-wrap">
+            <section class="product-sec d-flex align-items-start justify-content-end">
+                <aside class="product-sidebar">
+                    <ul class="sidebar-menu">
+                        <li><a href="#" class="active"><i class="fas fa-shopping-cart"></i> Order products</a></li>
+                        <li><a href="#"><i class="fas fa-tshirt"></i> My products</a></li>
+                        <li><a href="#"><i class="bi bi-palette-fill"></i> Your company information</a></li>
+                        <li><a href="#"><i class="fas fa-users"></i>Your employees</a></li>
+                        <li><a href="#"><i class="fas fa-receipt"></i> Order history</a></li>
+                        <li><a href="#"><i class="fas fa-question"></i> Ask a question</a></li>
+                    </ul>
+                    <div class="sidebar-contact-info text-center">
+                        <ul>
+                            <li>
+                                <p>Sortiment ApS<br> Hansborggade 30, 6100 Haderslev</p>
+                            </li>
+                            <li>
+                                <p>Tlf: <strong>30 30 30 30</strong></p>
+                                <p>Kontakt: <a href="mailto:info@sortiment.dk"><strong>info@sortiment.dk</strong></a></p>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                </aside><!-- Product sidebar -->
+                <div class="products-con">  
+                    <div class="single-product shadow-box">
+                        <div class="back-btn">
+                            <a href="#"><i class="bi bi-arrow-left-short"></i> Tilbage</a>
+                        </div><!-- Back button -->
+                        <div class="row">
+                            <div class="col-lg-7 col-md-12">
+                                <div class="product-gallery">
+                                    <figure class="text-center">
+                                        <img src="assets/img/single-product-img.png" alt="">
+                                    </figure>
+                                    <ul class="product-thumbs d-flex justify-content-center">
+                                        <li>
+                                            <a href="#"><img src="assets/img/product-thumb-img.png" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="assets/img/product-thumb-img.png" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="assets/img/product-thumb-img.png" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="assets/img/product-thumb-img.png" alt=""></a>
+                                        </li>
+                                    </ul>
+                                </div><!-- Product gallery -->
+                            </div>
+                            <div class="col-lg-5 col-md-12">
+                                <div class="product-info">
+                                    <h1>Jakke</h1>
+                                    <div class="price">Start pris: 500 DKK</div>
+                                    <div class="product-description">
+                                        <h3>Produkt beskrivelse</h3>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                                    </div><!-- Product description -->
+                                    <div class="product-color d-flex align-items-center">
+                                        <span>Farver:</span>
+                                        <ul class="d-flex">
+                                            <li class="color"></li>
+                                            <li class="color"></li>
+                                            <li class="color"></li>
+                                            <li class="color"></li>
+                                            <li class="color"></li>
+                                            <li class="color"></li>
+                                        </ul>
+                                    </div><!-- Product color -->
+                                    <a href="#" id="ask-price-btn" class="btn btn-blue modal-btn" data-bs-toggle="modal" data-bs-target="#priceModal">Forespørg pris</a>
+                                </div><!-- Product info -->
+                            </div>
+                        </div>
+                    </div><!-- Single product -->
+                    <!-- Modal -->
+                    <div class="modal fade" id="priceModal" role="dialog" aria-labelledby="priceModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header justify-content-center text-center">
+                            <h5 class="modal-title" id="priceModalLabel"><strong>Get a price for:</strong> “Name of product”</h5>
+                            <button type="button" class="btn-close round-btn" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="" class="price-form">
+                                    <div class="form-row mb-3 ">
+                                        <div class="row form-group">                                        
+                                            <label for="" class="col-md-6 col-sm-12 col-form-label">Do you want your logo on the product?</label>
+                                            <div class="col-md-6 col-sm-12 filed-group d-flex justify-content-end">
+                                                <label for="noRadio">
+                                                    <input class="form-check-input" id="noRadio" type="radio" name="Radios" value="No"> No
+                                                </label>
+                                                <label for="yesRadio">
+                                                    <input class="form-check-input" id="yesRadio" type="radio" name="Radios" value="Yes"> Yes
+                                                </label>
+                                            </div><!-- filed group -->
+                                        </div><!-- Form group -->
+                                        <div class="row form-group"> 
+                                            <label for="" class="col-md-6 col-sm-12 col-form-label">Where do you want your logo position?</label>
+                                            <div class="col-md-6 col-sm-12 filed-group d-flex justify-content-end">
+                                                <div class="form-check d-flex flex-wrap">
+                                                    <div class="d-flex align-items-center col-md-6">
+                                                        <input class="form-check-input" type="checkbox" id="check1">
+                                                        <label class="form-check-label" for="check1">
+                                                            Front left
+                                                        </label>
+                                                    </div><!-- div -->
+                                                    <div class="d-flex align-items-center col-md-6">
+                                                        <input class="form-check-input" type="checkbox" id="check2">
+                                                        <label class="form-check-label" for="check2">
+                                                            Front right
+                                                        </label>
+                                                    </div><!-- div -->
+                                                    <div class="d-flex align-items-center col-md-6">
+                                                        <input class="form-check-input" type="checkbox" id="check3">
+                                                        <label class="form-check-label" for="check3">
+                                                            Shoulder left
+                                                        </label>
+                                                    </div><!-- div -->
+                                                    <div class="d-flex align-items-center col-md-6">
+                                                        <input class="form-check-input" type="checkbox" id="check4">
+                                                        <label class="form-check-label" for="check4">
+                                                            Shoulder right
+                                                        </label>
+                                                    </div><!-- div -->
+                                                    <div class="d-flex align-items-center col-md-6">
+                                                        <input class="form-check-input" type="checkbox" id="check5">
+                                                        <label class="form-check-label" for="check5">
+                                                            On the backside
+                                                        </label>
+                                                    </div><!-- div -->
+                                                </div>
+                                            </div><!-- filed group -->
+                                        </div><!-- Form group -->
+                                    </div><!-- form row -->
+                                    <div class="form-row mb-3 ">
+                                        <div class="row form-group">                                        
+                                            <label for="" class="col-md-6 col-sm-12 col-form-label">Do you want to assign a text to the product?</label>
+                                            <div class="col-md-6 col-sm-12 filed-group d-flex justify-content-end">
+                                                <label for="noRadio2">
+                                                    <input class="form-check-input" id="noRadio2" type="radio" name="Radios2" value="No"> No
+                                                </label>
+                                                <label for="yesRadio2">
+                                                    <input class="form-check-input" id="yesRadio2" type="radio" name="Radios2" value="Yes"> Yes
+                                                </label>
+                                            </div><!-- filed group -->
+                                        </div><!-- Form group -->
+                                        <div class="row form-group"> 
+                                            <label for="" class="col-md-6 col-sm-12 col-form-label">Where do you want your text position?</label>
+                                            <div class="col-md-6 col-sm-12 filed-group d-flex justify-content-end">
+                                                <div class="form-check d-flex flex-wrap">
+                                                    <div class="d-flex align-items-center col-md-6">
+                                                        <input class="form-check-input" type="checkbox" id="check01">
+                                                        <label class="form-check-label" for="check1">
+                                                            Front left
+                                                        </label>
+                                                    </div><!-- div -->
+                                                    <div class="d-flex align-items-center col-md-6">
+                                                        <input class="form-check-input" type="checkbox" id="check02">
+                                                        <label class="form-check-label" for="check2">
+                                                            Front right
+                                                        </label>
+                                                    </div><!-- div -->
+                                                    <div class="d-flex align-items-center col-md-6">
+                                                        <input class="form-check-input" type="checkbox" id="check03">
+                                                        <label class="form-check-label" for="check3">
+                                                            Shoulder left
+                                                        </label>
+                                                    </div><!-- div -->
+                                                    <div class="d-flex align-items-center col-md-6">
+                                                        <input class="form-check-input" type="checkbox" id="check04">
+                                                        <label class="form-check-label" for="check4">
+                                                            Shoulder right
+                                                        </label>
+                                                    </div><!-- div -->
+                                                    <div class="d-flex align-items-center col-md-6">
+                                                        <input class="form-check-input" type="checkbox" id="check05">
+                                                        <label class="form-check-label" for="check5">
+                                                            On the backside
+                                                        </label>
+                                                    </div><!-- div -->
+                                                </div>
+                                            </div><!-- filed group -->
+                                        </div><!-- Form group -->
+                                    </div><!-- form row -->
+                                    <div class="form-group mb-3 upload-logo">
+                                        <button type="button" id="btnup" class="upload-btn d-flex align-items-center">
+                                            <img src="assets/img/upload-icon.png" class="upload-icon" alt="">            
+                                            <p id="namefile" class="">
+                                                <strong>Upload your logo <small class="d-flex">Allowed files: JPG, PNG, AI, SVG & PDF</small></strong>                                                
+                                            </p>                                             
+                                            </button>
+                                            <input type="file" value="" name="fileup" id="fileup">
+                                    </div><!-- Upload logo-->
+                                    <div class="form-group mb-3">
+                                        <textarea name="" id="" cols="" rows="" class="form-control" placeholder="Leave a note, with further information about your acquirements."></textarea>
+                                    </div><!-- row-->
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-blue f-width">Request price</button>
+                                    </div><!-- row-->
+                                </form><!-- Price form-->
+                            </div>
+                        </div>
+                        </div>
+                    </div><!-- Price modal-->
+                </div><!-- Product container -->
+            </section><!-- Product section -->
+        </div><!-- Content wrapper -->
+    </div><!-- Main wrapper -->
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+</html>

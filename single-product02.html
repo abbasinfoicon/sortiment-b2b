@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sortiment B2B - Single Product02</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="main-wrapper">
+        <header class="header d-flex justify-content-between align-items-center sticky-top">
+            <div class="head-left d-flex align-items-center">
+                <a href="#" class="logo"><img src="assets/img/sortiment-logo.png" alt="logo"></a>
+                <div class="search">
+                    <a href="#" class="search-icon"><img src="assets/img/search-solid.png" alt="search"></a>
+                    <input type="text" class="form-control" placeholder="Search for a product…">
+                </div>
+            </div><!-- Header left -->
+            <div class="head-right d-flex align-items-center p-relative">
+                <div class="minicart">
+                    <a href="javascript:void(0);" class="cart-icon" id="cart_popup">
+                        <span>
+                            <img src="assets/img/shopping-cart-solid.png" alt="">
+                            <small class="cart-badge">0</small>
+                        </span>
+                        <small class="carttext">0,00 DKK In cart</small>
+                    </a>
+                </div><!-- Minicart -->
+
+                <!-- shopping-cart -->
+                <div class="shopping-cart" style="display: none;"> 
+                   <div class="close-cart"> <i class="fa fa-times"></i></div>
+                    <div class="shopping-cart-header">
+                      <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">3</span>
+                      <div class="shopping-cart-total">
+                          <div class="shop">Shopping cart</div>
+                        <span class="lighter-text">Total:</span>
+                        <span class="main-color-text">$2,229.97</span>
+
+                      
+                      </div>
+                    </div> <!--end shopping-cart-header -->
+                
+                    <ul class="shopping-cart-items">
+                      <li class="clearfix">
+                        <a href="#"><img src="assets/img/product-img01.png" alt="item1" /></a>
+                        <a href="#">
+                            <span class="item-name">Sony DSC-RX100M III</span>
+                            <span class="item-price">$849.99</span>
+                            <span class="item-quantity">Quantity: 01</span>
+                        </a>
+                        <div class="remove-trash"> <i class="fa fa-trash"></i></div>
+                      </li>
+                
+                      <li class="clearfix">
+                        <a href="#"><img src="assets/img/product-img02.png" alt="item1" /></a>
+                        <a href="#">
+                            <span class="item-name">KS Automatic Mechanic...</span>
+                            <span class="item-price">$1,249.99</span>
+                            <span class="item-quantity">Quantity: 01</span>
+                        </a>
+                        <div class="remove-trash"> <i class="fa fa-trash"></i></div>
+                      </li>
+                
+                      <li class="clearfix">
+                        <a href="#"><img src="assets/img/product-img03.png" alt="item1" /></a>
+                        <a href="#"><span class="item-name">Kindle, 6" Glare-Free To...</span>
+                            <span class="item-price">$129.99</span>
+                            <span class="item-quantity">Quantity: 01</span>
+                        </a>   
+                        <div class="remove-trash"> <i class="fa fa-trash"></i></div>
+                      </li>
+                    </ul>
+                
+                    <div class="checkout-btn">
+                        <a href="#" class="button">Checkout</a>
+                    </div>
+                </div> <!--end shopping-cart -->
+
+
+                <div class="head-user-name">
+                    <a href="javascript:void(0);" id="logout_popup">
+                        <span class="username">Welcome “Name”</span>
+                        <img class="user-img" src="assets/img/user-img.png" alt="user picture">
+                    </a>
+                </div><!-- Head user name -->
+
+                 <!-- logout-popup -->
+                 <div class="user-logout" style="display: none;"> 
+                    <ul>
+                        <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+                        <li><a href="#"><i class="fa fa-cog"></i> Setting</a></li>
+                        <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
+                 </div> <!-- end-logout-popup -->
+
+            </div><!-- Header right -->
+        </header><!-- Header -->
+        <div class="content-wrap">
+            <section class="product-sec d-flex align-items-start justify-content-end">
+                <aside class="product-sidebar">
+                    <ul class="sidebar-menu">
+                        <li><a href="#"><i class="fas fa-shopping-cart"></i> Order products</a></li>
+                        <li><a href="#" class="active"><i class="fas fa-tshirt"></i> My products</a></li>
+                        <li><a href="#"><i class="bi bi-palette-fill"></i> Your company information</a></li>
+                        <li><a href="#"><i class="fas fa-users"></i>Your employees</a></li>
+                        <li><a href="#"><i class="fas fa-receipt"></i> Order history</a></li>
+                        <li><a href="#"><i class="fas fa-question"></i> Ask a question</a></li>
+                    </ul>
+                    <div class="sidebar-contact-info text-center">
+                        <ul>
+                            <li>
+                                <p>Sortiment ApS<br> Hansborggade 30, 6100 Haderslev</p>
+                            </li>
+                            <li>
+                                <p>Tlf: <strong>30 30 30 30</strong></p>
+                                <p>Kontakt: <a href="mailto:info@sortiment.dk"><strong>info@sortiment.dk</strong></a></p>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                </aside><!-- Product sidebar -->
+                <div class="products-con">  
+                    <div class="single-product shadow-box">
+                        <div class="back-btn">
+                            <a href="#"><i class="bi bi-arrow-left-short"></i> Tilbage</a>
+                        </div><!-- Back button -->
+                        <div class="row">
+                            <div class="col-lg-7 col-md-12">
+                                <div class="product-gallery">
+                                    <figure class="text-center">
+                                        <img src="assets/img/single-product-img02.png" alt="">
+                                    </figure>
+                                    <ul class="product-thumbs d-flex">
+                                        <li>
+                                            <a href="#"><img src="assets/img/product-thumb-img02.png" alt=""></a>
+                                        </li>
+                                    </ul>
+                                </div><!-- Product gallery -->
+                            </div>
+                            <div class="col-lg-5 col-md-12">
+                                <div class="product-info">
+                                    <h1>Name of product</h1>
+                                    <div class="price">Price: 500 DKK</div>
+                                    <div class="qty-price-table">
+                                        <a class="qty-toggle" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                            Toggle quantity prices
+                                        </a>
+                                        <div class="collapse" id="collapseExample">
+                                            <div class="card card-body table-responsive">
+                                                <table class="table">
+                                                    <thead>
+                                                      <tr>
+                                                        <th>Quantity</th>
+                                                        <th>Price pr. item</th>
+                                                      </tr>
+                                                    </thead>
+                                                      <tr>
+                                                        <td>0</td>
+                                                        <td>500 DKK</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>10</td>
+                                                        <td>450 DKK</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>25</td>
+                                                        <td>430 DKK</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>50</td>
+                                                        <td>420 DKK</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>100+</td>
+                                                        <td>400 DKK</td>
+                                                      </tr>
+                                                  </table>
+                                            </div>
+                                          </div>
+                                    </div><!-- Qty price -->
+                                    <div class="btn-row">
+                                        <a href="#" class="btn green-btn">Approve</a>
+                                        <a href="javascript:void(0);" class="btn red-btn" data-bs-toggle="modal" data-bs-target="#denyModal">Deny</a>
+                                    </div>
+                                    <div class="product-order d-none">
+                                        <div class="qty-col">
+                                            <span>Quantity</span>
+                                            <input type="text" placeholder="0" class="qty">
+                                        </div><!-- Qty -->
+                                        <a href="#" class="btn btn-blue order-btn">Order now</a>
+                                    </div><!-- product-order -->
+                                    <div class="download-pdf text-center">
+                                        <a href="#">DOWNLOAD PRODUCT PDF <i class="far fa-file-pdf"></i></a>
+                                    </div><!-- Download Pdf -->
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="denyModal" role="dialog" aria-labelledby="denyModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                        <div class="modal-content">
+                                            <div class="modal-header justify-content-center text-center">
+                                            <h5 class="modal-title" id="denyModalLabel"><strong>What was the reason 
+                                                for the denial?</strong></h5>
+                                            <button type="button" class="btn-close round-btn" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form action="" class="price-form">
+                                                    
+                                                
+                                                
+                                                    <div class="form-group mb-3">
+                                                        <textarea name="" id="" cols="" rows="" class="form-control" placeholder="Lorem Ipsum is simply dummy text of the printing and typesetting industry. "></textarea>
+                                                    </div><!-- row-->
+                                                    <div class="form-group">
+                                                        <button type="submit" class="btn btn-blue f-width">Submit</button>
+                                                    </div><!-- row-->
+                                                </form><!-- Price form-->
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div><!-- Price modal-->
+                                </div><!-- Product info -->
+                            </div>
+                        </div>
+                    </div><!-- Single product -->
+                </div><!-- Product container -->
+            </section><!-- Product section -->
+        </div><!-- Content wrapper -->
+    </div><!-- Main wrapper -->
+
+     
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+</html>

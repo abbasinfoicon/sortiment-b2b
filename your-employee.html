@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sortiment B2B - Your Employee</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="main-wrapper">
+        <header class="header d-flex justify-content-between align-items-center sticky-top">
+            <div class="head-left d-flex align-items-center">
+                <a href="#" class="logo"><img src="assets/img/sortiment-logo.png" alt="logo"></a>
+                <div class="search">
+                    <a href="#" class="search-icon"><img src="assets/img/search-solid.png" alt="search"></a>
+                    <input type="text" class="form-control" placeholder="Search for a product…">
+                </div>
+            </div><!-- Header left -->
+            <div class="head-right d-flex align-items-center">
+                <div class="minicart">
+                    <a href="#" class="cart-icon">
+                        <span>
+                            <img src="assets/img/shopping-cart-solid.png" alt="">
+                            <small class="cart-badge">0</small>
+                        </span>
+                        <small class="carttext">0,00 DKK In cart</small>
+                    </a>
+                </div><!-- Minicart -->
+                <div class="head-user-name">
+                    <a href="#">
+                        <span class="username">Welcome “Name”</span>
+                        <img class="user-img" src="assets/img/user-img.png" alt="user picture">
+                    </a>
+                </div><!-- Head user name -->
+            </div><!-- Header right -->
+        </header><!-- Header -->
+        <div class="content-wrap">
+            <section class="product-sec d-flex align-items-start justify-content-end">
+                <aside class="product-sidebar">
+                    <ul class="sidebar-menu">
+                        <li><a href="#"><i class="fas fa-shopping-cart"></i> Order products</a></li>
+                        <li><a href="#"><i class="fas fa-tshirt"></i> My products</a></li>
+                        <li><a href="#"><i class="bi bi-palette-fill"></i> Your company information</a></li>
+                        <li><a href="#" class="active"><i class="fas fa-users"></i>Your employees</a></li>
+                        <li><a href="#"><i class="fas fa-receipt"></i> Order history</a></li>
+                        <li><a href="#"><i class="fas fa-question"></i> Ask a question</a></li>
+                    </ul>
+                    <div class="sidebar-contact-info text-center">
+                        <ul>
+                            <li>
+                                <p>Sortiment ApS<br> Hansborggade 30, 6100 Haderslev</p>
+                            </li>
+                            <li>
+                                <p>Tlf: <strong>30 30 30 30</strong></p>
+                                <p>Kontakt: <a href="mailto:info@sortiment.dk"><strong>info@sortiment.dk</strong></a></p>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                </aside><!-- Product sidebar -->
+                <div class="products-con">  
+                    <div class="employee-wrap">
+                        <div class="row top-row d-flex align-items-center">
+                            <div class="col-md-6 d-flex align-items-center">
+                                <span class="icon"><i class="fas fa-file-excel"></i></span>
+                                <h3>
+                                    Import employees using Excel
+                                    <a href="#" class="dwn-file">Click here to download Excel template</a>
+                                </h3>
+                            </div>
+                            <div class="col-md-6 d-flex align-items-center">
+                                <span class="icon"><i class="fas fa-plus"></i></span>
+                                <h3><a href="#" class="add-employee modal-btn" data-bs-toggle="modal" data-bs-target="#employeeseModal">Add employees manually</a></h3>
+                            </div>
+                        </div><!-- Top row -->
+                        <div class="info-title">
+                            <h2>Your employees <span>12 employees found</span></h2>                            
+                        </div><!-- Top title-->
+                        <div class="products">
+                            <ul class="nav nav-tabs emp-view-icon" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                  <a href="#" class="active" id="list-tab" data-bs-toggle="tab" data-bs-target="#listview" role="tab" aria-controls="listview" aria-selected="true"><i class="fas fa-list-ul"></i></a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                  <a href="#"  id="grid-tab" data-bs-toggle="tab" data-bs-target="#gridview" type="button" role="tab" aria-controls="gridview" aria-selected="false"><i class="fas fa-th-large"></i></a>
+                                </li>
+                            </ul><!-- list and grid view icon --> 
+                            <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="listview" role="tabpanel" aria-labelledby="list-tab">
+                                <div class="table-content shadow-box list-view">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Name <i class="fas fa-angle-down"></i></th>
+                                                    <th>Email <i class="fas fa-angle-down"></i></th>
+                                                    <th>Pending products <i class="fas fa-angle-down"></i></th>
+                                                    <th>Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="assets/img/employee-img.png" alt="" class="employee-pic">
+                                                        <h4>Employee name <span class="login-time">Last logged in: 21 January</span></h4>                                                
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <a href="mailto:dtp@degnmarketing.dk">dtp@degnmarketing.dk</a>
+                                                </td>
+                                                <td>
+                                                    <small class="dot pending"></small>2 products pending approval
+                                                </td>
+                                                <td>
+                                                    <div class="actions">
+                                                        <a href="#"><i class="fas fa-eye"></i></a>
+                                                        <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                                        <a href="#"><i class="fas fa-trash-alt"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="assets/img/employee-img.png" alt="" class="employee-pic">
+                                                        <h4>Employee name <span class="login-time">Last logged in: 21 January</span></h4>                                                
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <a href="mailto:dtp@degnmarketing.dk">dtp@degnmarketing.dk</a>
+                                                </td>
+                                                <td>
+                                                    <small class="dot approved"></small>2 Approved
+                                                </td>
+                                                <td>
+                                                    <div class="actions">
+                                                        <a href="#"><i class="fas fa-eye"></i></a>
+                                                        <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                                        <a href="#"><i class="fas fa-trash-alt"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="assets/img/employee-img.png" alt="" class="employee-pic">
+                                                        <h4>Employee name <span class="login-time">Last logged in: 21 January</span></h4>                                                
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <a href="mailto:dtp@degnmarketing.dk">dtp@degnmarketing.dk</a>
+                                                </td>
+                                                <td>
+                                                    <small class="dot cancel"></small>2 products pending approval
+                                                </td>
+                                                <td>
+                                                    <div class="actions">
+                                                        <a href="#"><i class="fas fa-eye"></i></a>
+                                                        <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                                        <a href="#"><i class="fas fa-trash-alt"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="assets/img/employee-img.png" alt="" class="employee-pic">
+                                                        <h4>Employee name <span class="login-time">Last logged in: 21 January</span></h4>                                                
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <a href="mailto:dtp@degnmarketing.dk">dtp@degnmarketing.dk</a>
+                                                </td>
+                                                <td>
+                                                    <small class="dot pending"></small>2 products pending approval
+                                                </td>
+                                                <td>
+                                                    <div class="actions">
+                                                        <a href="#"><i class="fas fa-eye"></i></a>
+                                                        <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                                        <a href="#"><i class="fas fa-trash-alt"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="assets/img/employee-img.png" alt="" class="employee-pic">
+                                                        <h4>Employee name <span class="login-time">Last logged in: 21 January</span></h4>                                                
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <a href="mailto:dtp@degnmarketing.dk">dtp@degnmarketing.dk</a>
+                                                </td>
+                                                <td>
+                                                    <small class="dot pending"></small>2 products pending approval
+                                                </td>
+                                                <td>
+                                                    <div class="actions">
+                                                        <a href="#"><i class="fas fa-eye"></i></a>
+                                                        <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                                        <a href="#"><i class="fas fa-trash-alt"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="assets/img/employee-img.png" alt="" class="employee-pic">
+                                                        <h4>Employee name <span class="login-time">Last logged in: 21 January</span></h4>                                                
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <a href="mailto:dtp@degnmarketing.dk">dtp@degnmarketing.dk</a>
+                                                </td>
+                                                <td>
+                                                    <small class="dot pending"></small>2 products pending approval
+                                                </td>
+                                                <td>
+                                                    <div class="actions">
+                                                        <a href="#"><i class="fas fa-eye"></i></a>
+                                                        <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                                        <a href="#"><i class="fas fa-trash-alt"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="assets/img/employee-img.png" alt="" class="employee-pic">
+                                                        <h4>Employee name <span class="login-time">Last logged in: 21 January</span></h4>                                                
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <a href="mailto:dtp@degnmarketing.dk">dtp@degnmarketing.dk</a>
+                                                </td>
+                                                <td>
+                                                    <small class="dot pending"></small>2 products pending approval
+                                                </td>
+                                                <td>
+                                                    <div class="actions">
+                                                        <a href="#"><i class="fas fa-eye"></i></a>
+                                                        <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                                        <a href="#"><i class="fas fa-trash-alt"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="assets/img/employee-img.png" alt="" class="employee-pic">
+                                                        <h4>Employee name <span class="login-time">Last logged in: 21 January</span></h4>                                                
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <a href="mailto:dtp@degnmarketing.dk">dtp@degnmarketing.dk</a>
+                                                </td>
+                                                <td>
+                                                    <small class="dot pending"></small>2 products pending approval
+                                                </td>
+                                                <td>
+                                                    <div class="actions">
+                                                        <a href="#"><i class="fas fa-eye"></i></a>
+                                                        <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                                        <a href="#"><i class="fas fa-trash-alt"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="assets/img/employee-img.png" alt="" class="employee-pic">
+                                                        <h4>Employee name <span class="login-time">Last logged in: 21 January</span></h4>                                                
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <a href="mailto:dtp@degnmarketing.dk">dtp@degnmarketing.dk</a>
+                                                </td>
+                                                <td>
+                                                    <small class="dot pending"></small>2 products pending approval
+                                                </td>
+                                                <td>
+                                                    <div class="actions">
+                                                        <a href="#"><i class="fas fa-eye"></i></a>
+                                                        <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                                        <a href="#"><i class="fas fa-trash-alt"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="assets/img/employee-img.png" alt="" class="employee-pic">
+                                                        <h4>Employee name <span class="login-time">Last logged in: 21 January</span></h4>                                                
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <a href="mailto:dtp@degnmarketing.dk">dtp@degnmarketing.dk</a>
+                                                </td>
+                                                <td>
+                                                    <small class="dot pending"></small>2 products pending approval
+                                                </td>
+                                                <td>
+                                                    <div class="actions">
+                                                        <a href="#"><i class="fas fa-eye"></i></a>
+                                                        <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                                        <a href="#"><i class="fas fa-trash-alt"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="assets/img/employee-img.png" alt="" class="employee-pic">
+                                                        <h4>Employee name <span class="login-time">Last logged in: 21 January</span></h4>                                                
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <a href="mailto:dtp@degnmarketing.dk">dtp@degnmarketing.dk</a>
+                                                </td>
+                                                <td>
+                                                    <small class="dot pending"></small>2 products pending approval
+                                                </td>
+                                                <td>
+                                                    <div class="actions">
+                                                        <a href="#"><i class="fas fa-eye"></i></a>
+                                                        <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                                        <a href="#"><i class="fas fa-trash-alt"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="assets/img/employee-img.png" alt="" class="employee-pic">
+                                                        <h4>Employee name <span class="login-time">Last logged in: 21 January</span></h4>                                                
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <a href="mailto:dtp@degnmarketing.dk">dtp@degnmarketing.dk</a>
+                                                </td>
+                                                <td>
+                                                    <small class="dot pending"></small>2 products pending approval
+                                                </td>
+                                                <td>
+                                                    <div class="actions">
+                                                        <a href="#"><i class="fas fa-eye"></i></a>
+                                                        <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                                        <a href="#"><i class="fas fa-trash-alt"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="assets/img/employee-img.png" alt="" class="employee-pic">
+                                                        <h4>Employee name <span class="login-time">Last logged in: 21 January</span></h4>                                                
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <a href="mailto:dtp@degnmarketing.dk">dtp@degnmarketing.dk</a>
+                                                </td>
+                                                <td>
+                                                    <small class="dot pending"></small>2 products pending approval
+                                                </td>
+                                                <td>
+                                                    <div class="actions">
+                                                        <a href="#"><i class="fas fa-eye"></i></a>
+                                                        <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                                        <a href="#"><i class="fas fa-trash-alt"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div><!-- table details -->
+                                </div><!-- List view -->
+                            </div><!-- Tab panel-->
+                            <div class="tab-pane fade" id="gridview" role="tabpanel" aria-labelledby="grid-tab">
+                                <div class="product-grid-view">
+                                    <div class="row">
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="grid-col shadow-box">
+                                                <div class="p-25">
+                                                    <div class="emp-short-info d-flex align-items-center">
+                                                        <figure class="emp-pic"><img src="assets/img/employee-img.png" alt=""></figure>
+                                                        <div class="emp-name">
+                                                            <h4><a href="#">Employee name</a></h4>
+                                                            <span class="login-time">Last logged in: 21 January</span>
+                                                        </div>
+                                                    </div>
+                                                    <h5 class="text-center">Approved products: 3</h5>
+                                                    <span class="btn green-btn">Products needing approval: 0</span>
+                                                </div>
+                                                <div class="orderbtn-row">
+                                                    <a href="#" class="btn btn-blue">See orders</a>
+                                                </div>
+                                            </div><!-- Grid col -->
+                                        </div><!-- Col -->
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="grid-col shadow-box">
+                                                <div class="p-25">
+                                                    <div class="emp-short-info d-flex align-items-center">
+                                                        <figure class="emp-pic"><img src="assets/img/employee-img02.png" alt="" width="70"></figure>
+                                                        <div class="emp-name">
+                                                            <h4><a href="#">Employee name</a></h4>
+                                                            <span class="login-time">Last logged in: 21 January</span>
+                                                        </div>
+                                                    </div>
+                                                    <h5 class="text-center">Approved products: 2</h5>
+                                                    <span class="btn yellow-btn">Products needing approval: 1</span>
+                                                </div>
+                                                <div class="orderbtn-row">
+                                                    <a href="#" class="btn btn-blue">See orders</a>
+                                                </div>
+                                            </div><!-- Grid col -->
+                                        </div><!-- Col -->
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="grid-col shadow-box">
+                                                <div class="p-25">
+                                                    <div class="emp-short-info d-flex align-items-center">
+                                                        <figure class="emp-pic"><img src="assets/img/employee-img03.png" alt="" width="70"></figure>
+                                                        <div class="emp-name">
+                                                            <h4><a href="#">Employee name</a></h4>
+                                                            <span class="login-time">Last logged in: 21 January</span>
+                                                        </div>
+                                                    </div>
+                                                    <h5 class="text-center">Approved products: 0</h5>
+                                                    <span class="btn red-btn">Products needing approval: 0</span>
+                                                </div>
+                                                <div class="orderbtn-row">
+                                                    <a href="#" class="btn btn-blue">See orders</a>
+                                                </div>
+                                            </div><!-- Grid col -->
+                                        </div><!-- Col -->
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="grid-col shadow-box">
+                                                <div class="p-25">
+                                                    <div class="emp-short-info d-flex align-items-center">
+                                                        <figure class="emp-pic"><img src="assets/img/employee-img04.png" alt="" width="70"></figure>
+                                                        <div class="emp-name">
+                                                            <h4><a href="#">Employee name</a></h4>
+                                                            <span class="login-time">Last logged in: 21 January</span>
+                                                        </div>
+                                                    </div>
+                                                    <h5 class="text-center">Approved products: 0</h5>
+                                                    <span class="btn red-btn">Products needing approval: 3</span>
+                                                </div>
+                                                <div class="orderbtn-row">
+                                                    <a href="#" class="btn btn-blue">See orders</a>
+                                                </div>
+                                            </div><!-- Grid col -->
+                                        </div><!-- Col -->
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="grid-col shadow-box">
+                                                <div class="p-25">
+                                                    <div class="emp-short-info d-flex align-items-center">
+                                                        <figure class="emp-pic"><img src="assets/img/employee-img.png" alt=""></figure>
+                                                        <div class="emp-name">
+                                                            <h4><a href="#">Employee name</a></h4>
+                                                            <span class="login-time">Last logged in: 21 January</span>
+                                                        </div>
+                                                    </div>
+                                                    <h5 class="text-center">Approved products: 3</h5>
+                                                    <span class="btn green-btn">Products needing approval: 0</span>
+                                                </div>
+                                                <div class="orderbtn-row">
+                                                    <a href="#" class="btn btn-blue">See orders</a>
+                                                </div>
+                                            </div><!-- Grid col -->
+                                        </div><!-- Col -->
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="grid-col shadow-box">
+                                                <div class="p-25">
+                                                    <div class="emp-short-info d-flex align-items-center">
+                                                        <figure class="emp-pic"><img src="assets/img/employee-img02.png" alt="" width="70"></figure>
+                                                        <div class="emp-name">
+                                                            <h4><a href="#">Employee name</a></h4>
+                                                            <span class="login-time">Last logged in: 21 January</span>
+                                                        </div>
+                                                    </div>
+                                                    <h5 class="text-center">Approved products: 2</h5>
+                                                    <span class="btn yellow-btn">Products needing approval: 1</span>
+                                                </div>
+                                                <div class="orderbtn-row">
+                                                    <a href="#" class="btn btn-blue">See orders</a>
+                                                </div>
+                                            </div><!-- Grid col -->
+                                        </div><!-- Col -->
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="grid-col shadow-box">
+                                                <div class="p-25">
+                                                    <div class="emp-short-info d-flex align-items-center">
+                                                        <figure class="emp-pic"><img src="assets/img/employee-img03.png" alt="" width="70"></figure>
+                                                        <div class="emp-name">
+                                                            <h4><a href="#">Employee name</a></h4>
+                                                            <span class="login-time">Last logged in: 21 January</span>
+                                                        </div>
+                                                    </div>
+                                                    <h5 class="text-center">Approved products: 0</h5>
+                                                    <span class="btn red-btn">Products needing approval: 0</span>
+                                                </div>
+                                                <div class="orderbtn-row">
+                                                    <a href="#" class="btn btn-blue">See orders</a>
+                                                </div>
+                                            </div><!-- Grid col -->
+                                        </div><!-- Col -->
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="grid-col shadow-box">
+                                                <div class="p-25">
+                                                    <div class="emp-short-info d-flex align-items-center">
+                                                        <figure class="emp-pic"><img src="assets/img/employee-img04.png" alt="" width="70"></figure>
+                                                        <div class="emp-name">
+                                                            <h4><a href="#">Employee name</a></h4>
+                                                            <span class="login-time">Last logged in: 21 January</span>
+                                                        </div>
+                                                    </div>
+                                                    <h5 class="text-center">Approved products: 0</h5>
+                                                    <span class="btn red-btn">Products needing approval: 3</span>
+                                                </div>
+                                                <div class="orderbtn-row">
+                                                    <a href="#" class="btn btn-blue">See orders</a>
+                                                </div>
+                                            </div><!-- Grid col -->
+                                        </div><!-- Col -->
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="grid-col shadow-box">
+                                                <div class="p-25">
+                                                    <div class="emp-short-info d-flex align-items-center">
+                                                        <figure class="emp-pic"><img src="assets/img/employee-img.png" alt=""></figure>
+                                                        <div class="emp-name">
+                                                            <h4><a href="#">Employee name</a></h4>
+                                                            <span class="login-time">Last logged in: 21 January</span>
+                                                        </div>
+                                                    </div>
+                                                    <h5 class="text-center">Approved products: 3</h5>
+                                                    <span class="btn green-btn">Products needing approval: 0</span>
+                                                </div>
+                                                <div class="orderbtn-row">
+                                                    <a href="#" class="btn btn-blue">See orders</a>
+                                                </div>
+                                            </div><!-- Grid col -->
+                                        </div><!-- Col -->
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="grid-col shadow-box">
+                                                <div class="p-25">
+                                                    <div class="emp-short-info d-flex align-items-center">
+                                                        <figure class="emp-pic"><img src="assets/img/employee-img02.png" alt="" width="70"></figure>
+                                                        <div class="emp-name">
+                                                            <h4><a href="#">Employee name</a></h4>
+                                                            <span class="login-time">Last logged in: 21 January</span>
+                                                        </div>
+                                                    </div>
+                                                    <h5 class="text-center">Approved products: 2</h5>
+                                                    <span class="btn yellow-btn">Products needing approval: 1</span>
+                                                </div>
+                                                <div class="orderbtn-row">
+                                                    <a href="#" class="btn btn-blue">See orders</a>
+                                                </div>
+                                            </div><!-- Grid col -->
+                                        </div><!-- Col -->
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="grid-col shadow-box">
+                                                <div class="p-25">
+                                                    <div class="emp-short-info d-flex align-items-center">
+                                                        <figure class="emp-pic"><img src="assets/img/employee-img03.png" alt="" width="70"></figure>
+                                                        <div class="emp-name">
+                                                            <h4><a href="#">Employee name</a></h4>
+                                                            <span class="login-time">Last logged in: 21 January</span>
+                                                        </div>
+                                                    </div>
+                                                    <h5 class="text-center">Approved products: 0</h5>
+                                                    <span class="btn red-btn">Products needing approval: 0</span>
+                                                </div>
+                                                <div class="orderbtn-row">
+                                                    <a href="#" class="btn btn-blue">See orders</a>
+                                                </div>
+                                            </div><!-- Grid col -->
+                                        </div><!-- Col -->
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="grid-col shadow-box">
+                                                <div class="p-25">
+                                                    <div class="emp-short-info d-flex align-items-center">
+                                                        <figure class="emp-pic"><img src="assets/img/employee-img04.png" alt="" width="70"></figure>
+                                                        <div class="emp-name">
+                                                            <h4><a href="#">Employee name</a></h4>
+                                                            <span class="login-time">Last logged in: 21 January</span>
+                                                        </div>
+                                                    </div>
+                                                    <h5 class="text-center">Approved products: 0</h5>
+                                                    <span class="btn red-btn">Products needing approval: 3</span>
+                                                </div>
+                                                <div class="orderbtn-row">
+                                                    <a href="#" class="btn btn-blue">See orders</a>
+                                                </div>
+                                            </div><!-- Grid col -->
+                                        </div><!-- Col -->
+                                    </div><!-- Row -->
+                                </div><!-- Grid view -->
+                            </div><!-- Tab panel-->
+                            </div>                  
+                        </div><!-- Products-->
+                    </div><!-- Company Information -->
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="employeeseModal" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header text-center">
+                            <h5 class="modal-title">Add employees manually</h5>
+                            <p>We will automatically generate a user and password for each employee</p>
+                            <button type="button" class="btn-close round-btn" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="" class="add-emp-form">
+                                    <div class="row add-emp-row align-items-center" id='div_1'>
+                                        <div class="col-md-5">
+                                            <label>Name & last name</label>
+                                            <input type="text" class="form-control" placeholder="Employee name">
+                                        </div>
+                                        <div class="col-md-5">
+                                            <label for="">Email</label>
+                                            <input type="text" class="form-control" placeholder="Employee email">
+                                        </div>
+                                        <div class="col-md-2 text-center">
+                                            <a href="#" class="remove-emp"><i class="fas fa-times"></i></a>
+                                        </div>
+                                    </div><!-- Add employee row -->                                   
+                                    <div class="btn-row">
+                                        <a href="#" class="btn btn-outline add">Add another <i class="fas fa-plus"></i></a>
+                                        <a href="#" class="btn btn-blue">Done</a>
+                                    </div>
+                                </form>
+                            </div><!-- modal body-->
+                        </div>
+                        </div>
+                    </div><!-- Price modal-->
+                </div><!-- Product container -->
+            </section><!-- Product section -->
+        </div><!-- Content wrapper -->
+    </div><!-- Main wrapper -->
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+</html>
